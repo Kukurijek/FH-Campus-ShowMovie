@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    android:label="navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mad03_fragments_and_navigation.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.example.mad03_fragments_and_navigation.MovieDetailFragment"
+        tools:layout="@layout/fragment_movie_detail"
+        android:label="Movie Details">
+        <argument
+            android:name="movieId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/watchlistFragment"
+        android:name="com.example.mad03_fragments_and_navigation.FavoritesFragment"
+        android:label="@string/my_watchlist"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.mad03_fragments_and_navigation.QuizFragment"
+        android:label="Moviequiz"
+        tools:layout="@layout/fragment_quiz">
+        <action
+            android:id="@+id/action_quizFragment_to_quizEndFragment"
+            app:destination="@id/quizEndFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizEndFragment"
+        android:name="com.example.mad03_fragments_and_navigation.QuizEndFragment"
+        android:label="Moviequiz"
+        tools:layout="@layout/fragment_quiz_end">
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="sum"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_quizEndFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+</navigation>

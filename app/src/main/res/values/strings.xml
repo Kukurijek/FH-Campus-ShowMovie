@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="image_preview">Image preview</string>
+    <string name="story">Story</string>
+    <string name="creators">Creators:</string>
+    <string name="actors">Actors:</string>
+    <string name="addbtn">Add to watchlist button</string>
+    <string name="addMovieBtn">Add a new movie button</string>
+    <string name="my_watchlist">My Watchlist</string>
+    <string name="see_detail">See Detail</string>
+    <string name="welcome">Welcome to MovieApp!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="actors_separated_with">Actors (separated with ,)</string>
+    <string name="creators_separated_with">Creators (separated with ,)</string>
+    <string name="drama">Drama</string>
+    <string name="sport">Sport</string>
+    <string name="thriller">Thriller</string>
+    <string name="documentation">Documentation</string>
+    <string name="kids">Kids</string>
+    <string name="horror">Horror</string>
+    <string name="title">Title</string>
+    <string name="next">Next</string>
+    <string name="quiz">Quiz</string>
+    <string name="restart">Restart</string>
+    <string name="default_score">0/0</string>
+    <string name="your_score">Your Score</string>
+
+    <string name="question_progress">Question %d/%d</string>
+    <string name="my_notes">Your notes: %s</string>
+    <string name="add_to_favs">Add to Favs</string>
+    <string name="clear">Clear</string>
+    <string name="remove">Remove</string>
+    <string name="edit">Edit</string>
+</resources>
