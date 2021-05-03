@@ -1,5 +1,8 @@
 package com.example.mad03_fragments_and_navigation.models
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.example.mad03_fragments_and_navigation.R
 
 data class Movie(
@@ -18,3 +21,16 @@ data class Movie(
     var creators: MutableList<String> = mutableListOf()
     var genres: List<String>? = null
 }
+
+@Entity(tableName = "movie_table")
+data class Ajde(
+
+    @ColumnInfo(name = "movie_title")
+    var title: String = "",
+) {
+    @PrimaryKey(autoGenerate = true)
+    var id: Long? = 0L
+
+    @ColumnInfo(name = "movie_note")
+    var note: String = ""
+ }
