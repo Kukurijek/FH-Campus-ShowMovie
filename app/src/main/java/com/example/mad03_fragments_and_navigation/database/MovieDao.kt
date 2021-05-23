@@ -17,8 +17,8 @@ interface MovieDao {
   //  @Delete
    // fun delete(movieId: Long)
 
-  //  @Query("DELETE FROM movie_table")
-  ///  fun clearTable()
+    @Query("DELETE FROM movie_table")
+    fun clearTable()
 
  //   @Query("SELECT * FROM movie_table ORDER BY id DESC LIMIT 1")
   //  fun getAll(): LiveData<List<Movie>>

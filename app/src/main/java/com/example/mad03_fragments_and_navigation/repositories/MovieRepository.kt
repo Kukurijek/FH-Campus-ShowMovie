@@ -8,13 +8,13 @@ import kotlinx.coroutines.withContext
 class MovieRepository(private val movieDao: MovieDao) {
     // TODO implement me
 
-    /**
+
     suspend fun clearTable() {
             withContext(Dispatchers.IO) {
-                movieDao.
+                movieDao.clearTable()
             }
     }
-    **/
+
 
     suspend fun updateTable(movieToUpdate: Movie) {
         withContext(Dispatchers.IO) {
