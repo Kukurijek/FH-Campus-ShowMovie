@@ -15,6 +15,19 @@ class MovieRepository(private val movieDao: MovieDao) {
             }
     }
 
+    suspend fun getAll() {
+        withContext(Dispatchers.IO) {
+            movieDao.getAll()
+        }
+    }
+
+    suspend fun delete(movieId: Long) {
+        withContext(Dispatchers.IO) {
+            movieDao.delete(movieId = movieId)
+        }
+    }
+
+
 
     suspend fun updateTable(movieToUpdate: Movie) {
         withContext(Dispatchers.IO) {
